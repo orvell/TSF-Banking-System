@@ -1,0 +1,36 @@
+1. Create a database
+
+2. Create the following two tables
+
+CREATE TABLE customers(
+    c_id int(10) PRIMARY KEY AUTO_INCREMENT,
+    c_name varchar(30) NOT NULL,
+    c_acctno bigint(15) NOT NULL,
+    c_mail varchar(20) UNIQUE,
+    c_balance int(20) NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+    );
+	
+CREATE TABLE transactions(
+    id int(10) PRIMARY KEY AUTO_INCREMENT,
+    s_name varchar(30) NOT NULL,
+	s_acct bigint(15) NOT NULL,
+   	r_name varchar(30) NOT NULL,
+	r_acct bigint(15) NOT NULL,
+    amount int(20) NOT NULL,
+	transaction_id bigint(15) NOT NULL UNIQUE,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP
+    );
+	
+3. Insert the data of customers using the following format
+
+INSERT INTO customers(c_id, c_name, c_acctno,c_mail, c_balance) VALUES (1,'Orvell Ferreira',235001000000001,'orvell@gmail.com',50000);
+INSERT INTO customers(c_id, c_name, c_acctno,c_mail, c_balance) VALUES (2,'Sloan Dcunha',235001000000021,'sloan2@gmail.com',10000);
+INSERT INTO customers(c_id, c_name, c_acctno,c_mail, c_balance) VALUES (3,'Lance Main',235001000000040,'lance45@gmail.com',25000);
+INSERT INTO customers(c_id, c_name, c_acctno,c_mail, c_balance) VALUES (4,'Clint Ferreira',235001000000056,'clint@gmail.com',5000);
+INSERT INTO customers(c_id, c_name, c_acctno,c_mail, c_balance) VALUES (5,'Sanmit Dabre',235001000000024,'sanmit65@gmail.com',30000	);
+INSERT INTO customers(c_id, c_name, c_acctno,c_mail, c_balance) VALUES (6,'Smith Lopes',235001000000043,'smith5@gmail.com',8000);
+INSERT INTO customers(c_id, c_name, c_acctno,c_mail, c_balance) VALUES (7,'Lancylord Dmonte',235001000000058,'lancylord@gmail.com',25000);
+INSERT INTO customers(c_id, c_name, c_acctno,c_mail, c_balance) VALUES (8,'Nash Correia',2235001000000062,'nash12@gmail.com',12300);
+INSERT INTO customers(c_id, c_name, c_acctno,c_mail, c_balance) VALUES (9,'Reece Tuscano',235001000000078,'reece50@gmail.com',23000);
+INSERT INTO customers(c_id, c_name, c_acctno,c_mail, c_balance) VALUES (10,'Sijoy Almeida',235001000000015,'sijoy20@gmail.com',4100);
