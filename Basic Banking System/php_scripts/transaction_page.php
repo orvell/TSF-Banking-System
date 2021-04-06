@@ -95,14 +95,14 @@ if (isset($_POST['submit'])) {
     // check input of negative value by user
     if (($amount) < 0) {
         echo '<script>';
-        echo ' alert("Please enter correct amount.")';  // showing an alert box.
+        echo ' alert("You have entered Negative value. Please Enter correct amount. Try Again!")';  // showing an alert box.
         echo '</script>';
     }
 
     // check insufficient balance.
     else if ($amount > $sql1['c_balance']) {
         echo '<script>';
-        echo ' alert("Bad Luck! Insufficient Balance")';  // showing an alert box.
+        echo ' alert("Insufficient Balance. Try Again!")';  // showing an alert box.
         echo '</script>';
 
     }
@@ -111,7 +111,7 @@ if (isset($_POST['submit'])) {
     else if ($amount == 0) {
 
         echo "<script>";
-        echo "alert('Oops! Zero value cannot be transferred')";
+        echo "alert('Zero value cannot be transferred. Try Again!')";
         echo "</script>";
     } else {
         $sql = "SELECT * from customers where c_id=$to";
